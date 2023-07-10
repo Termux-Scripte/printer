@@ -74,7 +74,7 @@ def index(title, text, text_color, font, background_color, color_1, color_2, col
 
 </html>
 """
-    with open('C:/Users/Mohsen/Desktop/project/printer/index.htm',  mode='w+') as Html:
+    with open('./index.htm',  mode='w+') as Html:
         Html.write(head)
         if font == "Niconne":
             Html.write(font_def)
@@ -116,7 +116,7 @@ def User():
 def run():
     try:
         if sys.platform == "win32":
-            os.system("python3 -m http.server 420")
+            os.system("python -m http.server 420")
         if sys.platform == "linux":
             os.system("python3 -m http.server 420")
     except ModuleNotFoundError('install python3 and try again'):
