@@ -118,9 +118,9 @@ def run():
         if sys.platform == "win32":
             os.system("python -m http.server 420")
         if sys.platform == "linux":
-            os.system("python3 -m http.server 420")
-    except ModuleNotFoundError('install python3 and try again'):
-        os.system('apt install python3')
+            os.system("python3 -m http.server 12345")
+    except PermissionError():
+        print("Run Script With Sudo !")
 
     # تنظیم لوکال هاست برای ویندوز و لینوکس
 
